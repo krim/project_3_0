@@ -16,7 +16,7 @@ class ArraySeparate
     arr1_sum = @arr1.sum
     arr2_sum = @arr2.sum
     count = @arr1.length + @arr2.length
-    half_summ = (arr1_sum + arr2_sum) / count
+    half_summ = ((arr1_sum + arr2_sum) / count).ceil
 
     @arr1.sort!
     @arr2.sort!
@@ -53,3 +53,9 @@ class ArraySeparate
   end
 
 end
+
+# Сложность(без сортировок(.sort!)):
+# Взятие значение из начала - O(N)
+# Вставка в начало - O(N)
+# Добавление в конец - O(1)
+# Итого: N * (2*N) = 3*N
