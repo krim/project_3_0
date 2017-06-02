@@ -18,9 +18,6 @@ class ArraySeparate
     count = @arr1.length + @arr2.length
     half_summ = ((arr1_sum + arr2_sum) / count).ceil
 
-    @arr1.sort!
-    @arr2.sort!
-
     count.times do
       ar1_value = @arr1.shift
       ar2_value = @arr2.shift
@@ -35,9 +32,6 @@ class ArraySeparate
         @arr2.push ar2_value
       end
     end
-
-    @arr1.sort!
-    @arr2.sort!
 
     debug_message @arr1.join(", ")
     debug_message @arr2.join(", ")
@@ -54,7 +48,7 @@ class ArraySeparate
 
 end
 
-# Сложность(без сортировок(.sort!)):
+# Сложность:
 # Взятие значение из начала - O(N)
 # Вставка в начало - O(N)
 # Добавление в конец - O(1)

@@ -6,7 +6,7 @@ describe ArraySeparate do
 
   it 'can separate arrays' do
     new_arr1, new_arr2 = ArraySeparate.start(arr1, arr2)
-    expect(new_arr1).to eq([0, 1, 3, 4, 5, 8, 12, 15, 16, 16])
-    expect(new_arr2).to eq([27, 27, 30, 31, 35, 38, 40])
+    expect(new_arr1.sort).to eq([0, 1, 3, 4, 5, 8, 12, 15, 16, 16])
+    expect(new_arr2.sort).to eq([27, 27, 30, 31, 35, 38, 40])
   end
 end
